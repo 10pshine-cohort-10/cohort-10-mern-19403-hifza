@@ -27,7 +27,7 @@ export default function Profile() {
 
             try {
                 const [data] = await Promise.all([
-                    axios.get('http://localhost:5000/api/auth/profile', config)
+                    axios.get(`${import.meta.env.VITE_API_URL}/api/auth/profile`, config)
                 ]);
 
                 setUser(data.data);

@@ -41,7 +41,7 @@ export default function Editor() {
                 }
 
                 try {
-                    const res = await axios.get('http://localhost:5000/api/notes/', config);
+                    const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/notes/`, config);
 
                     const noteToEdit = res.data.find((note) => note.id === parseInt(id));
 
@@ -86,7 +86,7 @@ export default function Editor() {
         }
 
         try {
-            const response = await axios.post('http://localhost:5000/api/notes/', {
+            const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/notes/`, {
                 title: title,
                 content: content
             }, config);
@@ -124,7 +124,7 @@ export default function Editor() {
         }
 
         try {
-            const response = await axios.put(`http://localhost:5000/api/notes/${id}`, {
+            const response = await axios.put(`${import.meta.env.VITE_API_URL}/api/notes/${id}`, {
                 title: title,
                 content: content
             }, config);

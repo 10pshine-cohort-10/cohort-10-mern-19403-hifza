@@ -12,7 +12,10 @@ const noteRoutes = require('./routes/notesRoutes.js');
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+    origin: process.env.FRONTEND_URL || 'http://localhost:5173',
+    credentials: true
+}));
 app.use(express.json());
 app.use(pinoHTTP({ logger }));
 
@@ -35,7 +38,7 @@ module.exports = app;
 
 if (require.main === module) {
     const port = process.env.PORT || 5000;
-    app.listen(port, () => {
+    app.listen(port, '0.0.0.0', () => {
         logger.info(`Server is Running on port ${port}`);
     });
 }

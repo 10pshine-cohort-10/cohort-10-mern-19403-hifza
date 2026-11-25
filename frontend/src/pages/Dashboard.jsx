@@ -28,8 +28,8 @@ export default function Dashboard() {
 
             try {
                 const [notesRes, profileRes] = await Promise.all([
-                    axios.get('http://localhost:5000/api/notes/', config),
-                    axios.get('http://localhost:5000/api/auth/profile', config)
+                    axios.get(`${import.meta.env.VITE_API_URL}/api/notes/`, config),
+                    axios.get(`${import.meta.env.VITE_API_URL}/api/auth/profile`, config)
                 ]);
 
                 setNotes(notesRes.data);

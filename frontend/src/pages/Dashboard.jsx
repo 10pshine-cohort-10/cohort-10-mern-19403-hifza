@@ -62,7 +62,7 @@ export default function Dashboard() {
         const config = { headers: { Authorization: `Bearer ${token}` } };
 
         try {
-            await axios.delete(`http://localhost:5000/api/notes/${id}`, config);
+            await axios.delete(`${import.meta.env.VITE_API_URL}/api/notes/${id}`, config);
             setMessage('The note was deleted successfully.');
             setNotes(notes.filter((note) => note.id !== id));
         } catch (err) {

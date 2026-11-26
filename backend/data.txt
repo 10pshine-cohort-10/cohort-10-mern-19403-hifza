@@ -1,0 +1,20 @@
+Host = b2k9hh029va21xgc4ora-mysql.services.clever-cloud.com
+
+Port = 3306
+
+Username = ue1qnkpr8y895hxv
+
+Password = ZKcMKFBsB3BH4JRvzotH
+
+Database name = b2k9hh029va21xgc4ora
+
+connection URI = mysql://ue1qnkpr8y895hxv:ZKcMKFBsB3BH4JRvzotH@b2k9hh029va21xgc4ora-mysql.services.clever-cloud.com:3306/b2k9hh029va21xgc4ora
+
+MYSQL_ADDON_HOST=b2k9hh029va21xgc4ora-mysql.services.clever-cloud.com
+MYSQL_ADDON_DB=b2k9hh029va21xgc4ora
+MYSQL_ADDON_USER=ue1qnkpr8y895hxv
+MYSQL_ADDON_PORT=3306
+MYSQL_ADDON_PASSWORD=ZKcMKFBsB3BH4JRvzotH
+MYSQL_ADDON_URI=mysql://ue1qnkpr8y895hxv:ZKcMKFBsB3BH4JRvzotH@b2k9hh029va21xgc4ora-mysql.services.clever-cloud.com:3306/b2k9hh029va21xgc4ora
+app_password = qjja wskm nckm wezj
+app_name = notes-app

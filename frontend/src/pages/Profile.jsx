@@ -68,7 +68,14 @@ export default function Profile() {
                     <p className="p-4"><strong >Email: </strong><div className="mt-4 brightness-80 bg-light p-2 rounded-lg shadow-2xl">{user.email}</div></p>
                     <p className="p-4"><strong >Created At: </strong><div className="mt-4 brightness-80 bg-light p-2 rounded-lg shadow-2xl">{String(user.created_at)}</div></p>
                 </div>) :
-                <p className="bg-pink-500">Loading...</p>}
+                <div className="flex items-center justify-center min-h-screen bg-gray-50">
+                    <div className="flex flex-col items-center gap-4">
+                        {/* The Spinner */}
+                        <div className="w-10 h-10 border-4 border-gray-300 border-t-accent rounded-full animate-spin"></div>
+                        {/* The Text */}
+                        <p className="text-gray-500 font-medium animate-pulse">Loading your profile...</p>
+                    </div>
+                </div>}
 
             <div className="flex">
                 <button className="ml-auto p-4 m-8 bg-dark text-white hover:bg-dark/50 hover:text-dark shadow-2xl rounded-lg" onClick={handleLogout}>Logout</button>
